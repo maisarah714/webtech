@@ -1,0 +1,20 @@
+body{
+  background-color: darkgreen;
+}
+
+#first{
+  color: blue;
+  cursor: pointer;
+}
+
+#first:hover{
+
+}
+
+#second{
+  color: orange;
+}
+
+.next{
+  color: white;
+}

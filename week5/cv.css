@@ -1,0 +1,65 @@
+body{
+  margin: 0 auto;
+  width: 95%;
+  max-width: 900px;
+}
+
+.header{
+  background-color: #a66;
+  width: 71%;
+  padding: 30px;
+  position: fixed;
+}
+
+h1, .email, .name{
+    color: white;
+    margin: 0;
+}
+
+h1{
+  text-align: center;
+  padding: 30px 0;
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+.name{
+  float: left;
+}
+
+.email{
+  float: right;
+}
+
+.nav{
+  float: left;
+  width: 30%;
+  height: 200px;
+  margin: 20px 30px 20px 0;
+  background-color: #f3c6c6;
+}
+
+.main{
+  border: 2px dotted #a66;
+  padding: 10px;
+  float: right;
+  width: 63%;
+  margin-top: 10px;
+  height: 1000px;
+  margin-bottom: 10px;
+}
+
+.footer{
+  clear: both;
+  text-align: center;
+  border: 1px solid #f3c6c6;
+}
+
+.body{
+  margin-top: 100px;
+  background-color: #f0e5e5;
+}
+
+li{
+
+}

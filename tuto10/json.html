@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var client = new XMLHttpRequest();
+      // JSON Respond
+      client.onreadystatechange = function() {
+        if(client.readyState == 4 && client.status == 200) {
+          var countries = JSON.parse(this.responseText);
+          for (var i = 0; i < countries.length; i++) {
+            document.write("<a href='#' class='countrydetail'>" + countries[i].name + "</a><br>");
+          }
+        };
+      };
+      // JSON Open
+      client.open("GET", "https://restcountries.eu/rest/v2/all", true);
+      // JSON Send
+      client.send();
+
+
+      // POST
+
+      var clickedcountry = document.getElementsByClassName('countrydetail');
+      clickedcountry.addEventListener('click', function(){
+
+      });
+
+
+
+    </script>
+  </head>
+
+
+  <body>
+  </body>
+
+
+
+</html>

@@ -1,0 +1,20 @@
+html {
+  font-family: sans-serif;
+}
+
+p{
+  width: 200px;
+  height: 24px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.125rem; /* 18/16px 16px is root size (html)*/
+  color: red;
+  background-image: linear-gradient(to bottom right, red 30%, darkred);
+  text-shadow: 1px 1px 5px black;
+  border: 1px solid darkred;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.7), 2px 2px 5px rgba(255,255,255,0.7) inset,
+  -1px -1px 5px rgba(0,0,0,0.7) inset;
+}
+
+/* Your CSS below here */

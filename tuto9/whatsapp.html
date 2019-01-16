@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="whatsapp.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#send").click(function(){
+
+        $.post("http://adisazizan.xyz/tutorial/message.php",
+        {
+          name: $('#name').val(),
+          message: $('#message').val(),
+        },
+        function(data,status){
+            alert("Data: " + data.status);
+        });
+        getmessage();
+    });
+});
+
+getmessage();
+function getmessage(){
+$.get("http://adisazizan.xyz/tutorial/message_list.php",
+function(data,status){
+  var x = '';
+  for (i = 0; i < data.length; i++) {
+    x += "<p>Name:"+ data[i].name +"<br>Message: "  + data[i].message + "</p><br>";
+  }
+    document.getElementById("mymessage").innerHTML = x;
+});
+}
+</script>
+</head>
+
+
+<body>
+
+  <div class="phone">
+    <div class="notificationbar">
+    </div>
+
+    <div class="recepient">
+      <img class="icon" src="back.png" alt="icon">
+      <img class="propic" src="propic.jpg" alt="profile picture">
+      <p class="username">Wan Maisarah</p>
+      <p class="status">online</p>
+    </div>
+
+    <div class="chat">
+      <div class="" id="mymessage"></div>
+    </div>
+
+    <div class="messagebox">
+      <form class="" method="post">
+        <input type="text" name="name" id="name" value="">
+
+        <input type="text" name="message" id="message" value="">
+      </form>
+
+      <button id="send">Send</button>
+    </div>
+  </div>
+
+
+
+  <!-- message box -->
+
+
+</body>
+</html>

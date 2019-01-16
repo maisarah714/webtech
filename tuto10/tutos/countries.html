@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="" id="id">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      var x = "";
+      $.get("https://restcountries.eu/rest/v2/all",
+        function(data,status) {
+          for (var i = 0; i < data.length; i++) {
+            x += "<p><a href='detail.html?code="+ data[i].callingCodes +"' class='lcountry'>" + data[i].name + "</a></p>";
+          }
+          document.getElementById('id').innerHTML = x;
+      });
+    </script>
+  </body>
+</html>

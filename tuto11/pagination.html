@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #id{
+        column-count:3;
+        margin: 150px;
+      }
+      body{
+        width: 90%;
+        margin-left: 5%;
+      }
+      #page{
+        display: inline-block;
+      }
+
+      #page a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      #page a.active {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+      }
+
+      #page a:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+      }
+
+      img{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <center><div class="" id="id">
+
+    </div>
+
+    <div id="page">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      var y= ""; //
+      var x = "";
+
+      var url = window.location.href;
+      console.log(url);
+      url = url.split("?code=");
+
+      var pagenum = "https://reqres.in/api/users?page=" + url[1];
+
+      $.get(pagenum,
+        function(data,status) {
+          for (var i = 0; i < data.per_page; i++) {
+            y+= '<img src="' + data.data[i].avatar + '" alt="">'
+            y+= "<p>ID: " + data.data[i].id + "</p>";
+            y+= "<p>First Name: " + data.data[i].first_name + "</p>";
+            y+= "<p>Last Name: " + data.data[i].last_name + "</p>";
+          }
+          document.getElementById('id').innerHTML = y;
+
+          for (var j = 1; j < data.total_pages; j++) {
+            x += "<a href='pagination.html?code=" + j + "'</a>" + j + "   ";
+          }
+          document.getElementById('page').innerHTML = x;
+      });
+    </script>
+  </body>
+</html>

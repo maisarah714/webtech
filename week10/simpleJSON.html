@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      // JSON Request
+      var client = new XMLHttpRequest();
+      // JSON Open
+      client.open("GET", "http://api.zippopotam.us/MY/53100", true);
+      // JSON Respond
+      client.onreadystatechange = function() {
+        if(client.readyState == 4 &&client.status==200) {
+          var response = JSON.parse(client.responseText);
+          document.getElementById('result').textContent = response['places']['place name'][0];
+        };
+      };
+
+      // JSON Send
+      client.send();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

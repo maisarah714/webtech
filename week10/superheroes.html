@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Super Hero Squad</h1>
+
+<p style="display:inline">Enter member name:</p>
+<input type="text" id="text" value="">
+<button id="button" type="button">Enter</button>
+
+<p id="demo"></p>
+
+<script>
+  var btn = document.getElementById('button');
+  btn.addEventListener('click', function(){
+      var obj = JSON.parse('{"squad name": "Super hero squad","hometown": "Metro City","members": [{ "member name": "Molecule Man","secret identity": "Dan Jukes"},{ "member name": "Madame Uppercut","secret identity": "Jane Wilson"}]}');
+      if(document.getElementById('text').value == obj[members][member name][1]){
+        document.getElementById("demo").innerHTML = "Welcome, strongest Avengers!";
+      }
+      else {
+          document.getElementById("demo").innerHTML = "Access Denied";
+      }
+  });
+
+</script>
+
+
+</body>
+</html>

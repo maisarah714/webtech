@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="" id="id">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      var url = window.location.href;
+      console.log(url);
+      url = url.split("?code=");
+      console.log(url[0]);
+      console.log(url[1]);
+      var callcode = "https://restcountries.eu/rest/v2/callingcode/" + url[1];
+      var x ="";
+      $.get(callcode,
+        function(data,status) {
+          for (var i = 0; i < data.length; i++) {
+            x += "<p>Name:"+ data[i].name + "</p>" +
+            "<p>Capital:"+data[i].capital +"</p>" +
+            "<p><img src='"+ data[i].flag +"' alt='' style='width:200px;'></p>";
+          }
+          document.getElementById('id').innerHTML = x;
+      });
+    </script>
+
+  </body>
+</html>

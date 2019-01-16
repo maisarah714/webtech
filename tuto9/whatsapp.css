@@ -1,0 +1,99 @@
+.body{
+  margin: 0;
+}
+
+.phone{
+  width: 360px;
+  height: 640px;
+  background-color: pink;
+}
+
+.notificationbar{
+  width: 100%;
+  height: 30px;
+  background-color: #054E42;
+}
+
+.recepient{
+  background-color: #036058;
+  width: 100%;
+  height: 70px;
+}
+
+.recepient .icon{
+  margin: 20px;
+  display: inline;
+  position: absolute;
+}
+
+.recepient .propic{
+  width: 45px;
+  height: 45px;
+  border-radius: 90px;
+  margin: 10px 15px;
+  margin-left: 50px;
+
+}
+
+.recepient .username{
+  display: inline;
+  position: relative;
+  bottom: 40px;
+  color: white;
+  font-family: arial;
+  font-weight: 400;
+}
+
+.recepient .status{
+  display: inline;
+  position: relative;
+  bottom: 15px;
+  right: 105px;
+  color: white;
+  font-size: 12px;
+  font-family: arial;
+}
+
+.chat{
+  background-color:	#EFE6DF;
+  width: 100%;
+  height: 490px;
+  overflow-y: scroll;
+
+}
+
+.chat::-webkit-scrollbar{
+  display: none;
+}
+
+#mymessage{
+  margin-left: 15px;
+}
+
+#message{
+  display: block;
+}
+
+#message, #name{
+  width: 75%;
+  border-style: none;
+  padding: 5px;
+  margin:5px;
+  border-radius: 5px;
+  display: inline;
+}
+
+.messagebox{
+  background-color: #F0ECE4;
+  width: 360px;
+  height: 70px;
+  position: absolute;
+
+}
+
+#send{
+  position: relative;
+  bottom: 50px;
+  right: 10px;
+  float: right;
+}

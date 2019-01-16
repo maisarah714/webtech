@@ -1,0 +1,54 @@
+.right{
+  float: right;
+
+  height: 700px;
+  width: 45%;
+  background: url("http://adisazizan.xyz/img/portfolio-3.jpg"),linear-gradient(to bottom right, maroon, purple, transparent);
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+
+.left{
+  float: left;
+  width: 40%;
+  padding: 25px 5%;
+}
+
+h2{
+  font-family: sans-serif;
+}
+
+.name, .email, .pass, .rpass{
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-color: maroon;
+  display: block;
+  margin-top: 5px;
+  padding-top: 15px;
+  width: 90%;
+}
+
+.name:focus, .email:focus, .pass:focus, .rpass:focus{
+  outline: none;
+}
+
+.fin{
+  padding-top: 30px;
+}
+
+.submit{
+}
+
+.sub{
+  color: white;
+  border-radius: 15px;
+  padding: 20px 150px;
+  background-image: linear-gradient(to bottom right, maroon, purple);
+}
+
+
+.check p{
+  display: inline;
+}
