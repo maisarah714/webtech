@@ -1,0 +1,76 @@
+/* a lot of this just require a good understanding of divs */
+
+
+body{
+  margin: 0 0 0 0;
+}
+.right{
+  width: 30%;
+  float: right;
+}
+.whole{
+  background-color: #e2e1e1;
+  height: 120px;
+}
+
+.logo{
+  height: 120px;
+  width: 50%;
+  float: left;
+}
+
+.logo img{
+   height: 100px; padding: 10px;
+}
+
+.avatar{
+  margin: 50px 50%;
+}
+.avatar img{
+  height:100px; border-radius:90px;
+}
+
+.shadow{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 210px;
+  margin: 20px 20px 0 50px;
+  float: right;
+}
+p{
+  float: right;
+  margin: 50px 50px 0 0;
+  width:100px;
+}
+.shadow table{
+  background-color: white;
+
+}
+.shadow th{
+  padding: 10px 20px;
+  border-collapse: collapse;
+  width: 200px;
+  text-align: left;
+}
+.line{
+  border-left: 3px solid black;
+}
+.form table{
+  height:30px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.form th, .form table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  vertical-align: middle;
+  height: 40px;
+  padding-left: 20px;
+  text-align: left;
+  width: 500px;
+}
+
+.form tr{
+}

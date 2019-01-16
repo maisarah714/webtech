@@ -1,0 +1,32 @@
+p{
+  color:red;
+}
+
+input {
+  border-radius: 5px;
+  height: 25px;
+  width: 300px;
+  padding-top: : 30px;
+  padding-left: 5px;
+  margin-left: 7%;
+  margin-bottom: 20px;
+
+}
+
+textarea{
+  height: auto;
+  width: 300px;
+  border-radius: 5px;
+  margin-left: 7%;
+}
+label{
+  vertical-align: top;
+  margin: 10px 10px;
+  position: absolute;
+}
+button{
+  margin-top: 15px;
+  margin-left: 5%;
+  border-radius:7px;
+  padding: 7px 25px;
+}
