@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+    <style media="screen">
+      input{
+        font-size:2em;
+        width:100px;
+        height:85px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table border="4">
+        <tr>
+          <td colspan="1">
+            <input class="display" type="text" style="width:415px;" size="30" name="Display">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+            <tr>
+              <div class="test">
+
+                <td><input class="calc-btn" data-role="number" type="button" value="7"></td>
+                <td><input class="calc-btn" data-role="number" type="button" value="8"></td>
+                <td><input class="calc-btn" data-role="number" type="button" value="9"></td>
+                <td><input class="calc-btn" data-role="operator" type="button" value="+"></td>
+              </div>
+              </tr>
+            <tr>
+              <td><input class="calc-btn" data-role="number" type="button" value="4"></td>
+              <td><input class="calc-btn" data-role="number" type="button" value="5"></td>
+              <td><input class="calc-btn" data-role="number" type="button" value="6"></td>
+              <td><input class="calc-btn" data-role="operator" type="button" value="-"></td>
+              </tr>
+            <tr>
+              <td><input class="calc-btn" data-role="number" type="button" value="1"></td>
+              <td><input class="calc-btn" data-role="number" type="button" value="2"></td>
+              <td><input class="calc-btn" data-role="number" type="button" value="3"></td>
+              <td><input class="calc-btn" data-role="operator" type="button" value="*"></td>
+              </tr>
+            <tr>
+              <td><input class="clear-btn" type="button" value="C"></td>
+              <td><input class="calc-btn" data-role="number" type="button" value="0"></td>
+              <td><input class="calculate-btn" type="button" value="="></td>
+              <td><input class="calc-btn" data-role="operator" type="button" value="/"></td>
+              </tr>
+              <table>
+
+              </table>
+          </table>
+        </td>
+        </tr>
+      </table>
+      </center>
+
+  </body>
+  <script>
+    //$ is use to access element.
+    //can use either
+      //on('click',function()
+      //click(function())
+    $(".calc-btn").on('click',function(){
+      //$(this) refrs to .calc-btn
+      if($(this).attr('data-role')!='operator'){ //for number
+        $(".display").val($(".display").val()+$(this).val());
+      }
+      else{
+        if($(".display").val()!=''){//if display is not blank
+          $(".display").val($(".display").val()+$(this).val());
+        }
+      }
+    });
+
+    //clear button
+    $(".clear-btn").on('click',function(){
+      $(".display").val('');
+    });
+
+    $(".calculate-btn").on('click', function(){ //=
+      var expression = $(".display").val();
+      $(".display").val(eval(expression));
+    })
+
+  </script>
+</html>
