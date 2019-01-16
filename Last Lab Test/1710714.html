@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style media="screen">
+    body{
+      margin: auto;
+    }
+    .all{
+      margin: 105px;
+    }
+    #timer{
+      width: 250px;
+      height: 85px;
+      border-radius: 15px;
+      margin: auto;
+      align: center;
+      text-align: center;
+      padding-top: 20px;
+      font-size: 50px;
+    }
+
+    .smallbtn{
+      background-color:#4C8CC7;
+      height: 60px;
+      width: 110px;
+      border-radius: 15px;
+      text-align: center;
+      padding: 5px;
+      margin: 5px 10px;
+    }
+    table{
+      margin: auto;
+    }
+
+  </style>
+
+
+  <body>
+    <div class="all">
+
+      <div id="timer">
+
+      </div>
+
+      <table>
+        <tr>
+          <td>
+            <button id="normaldry" class="smallbtn" type="button" name="button" onclick="timestart(140)">
+              <p>Normal Dry</p>
+              </button>
+          </td>
+          <td>
+            <button id="delicates" class="smallbtn" type="button" name="button" onclick="timestart(90)">
+              <p>Delicates</p>
+              </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="power" class="smallbtn" type="button" name="button" onclick="on()">
+                <p>Power</p>
+              </button>
+          </td>
+          <td>
+            <button id="start" class="smallbtn" type="button" name="button" onclick="countdown()">
+              <p>Start</p>
+              </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      var screen = document.getElementById('timer');
+
+      var power = document.getElementById("power");
+      var delicates = document.getElementById("delicates");
+      var normaldry = document.getElementById("normaldry");
+      var start = document.getElementById("start");
+
+      power.value = "false"; //means off
+
+      if(power.value=="false"){
+        screen.style.backgroundColor = "#D3D3D3";
+        delicates.disabled = true;
+        normaldry.disabled = true;
+        start.disabled = true;
+        console.log("false");
+      }
+
+      function on(){
+        power.value=="true";
+        screen.style.backgroundColor = "#91D04E";
+        delicates.disabled = false;
+        normaldry.disabled = false;
+      };
+
+      var timecount;
+      function timestart(time){
+        start.disabled = false;
+        var hour = Math.floor(time/60);
+        var minute = time%60;
+        var display = hour + ":" + minute;
+        screen.innerHTML= display;
+        timecount = time;
+      }
+
+
+      function countdown() {
+          var timer = timecount, hours, minutes;
+          setInterval(function () {
+              hours = parseInt(timer / 60, 10)
+              minutes = parseInt(timer % 60, 10);
+
+              hours = hours < 10 ? hours : hours;
+              minutes = minutes < 10 ? minutes : minutes;
+
+              screen.innerHTML = hours + ":" + minutes;
+
+              if (--timer < 0) {
+                  timer = timecount;
+              }
+          }, 60000); //will countdown by minute. wait one minute to see changes...
+      }
+
+
+    </script>
+
+
+
+
+
+
+  </body>
+</html>

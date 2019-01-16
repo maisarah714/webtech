@@ -1,0 +1,411 @@
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #111;
+}
+
+.menu .active {
+  background-color: #2b989e;
+}
+
+
+/* slideshow from w3school*/
+.mySlides {
+  display: none;
+  margin-top: 45px;
+}
+
+.mySlides img {
+  vertical-align: middle;
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* layer of grey on image  */
+.mySlides .box1{
+  width: 100%;
+  height: 650px;
+  background-color: #bfc9d6;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.mySlides .box{
+  width: 100%;
+  height: 650px;
+  position: absolute;
+}
+
+/* first slide  text*/
+.mySlides .first{
+  margin: 150px 25%;
+  vertical-align: middle;
+  font-stretch: extra-expanded;
+  font-size: 4em;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5em;
+
+}
+
+/* second slide text */
+.mySlides .second{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+  text-align: justify;
+  font-size: 1.5em;
+  padding: 50px;
+  vertical-align: middle;
+}
+
+/* third slide text */
+.mySlides .third{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1em;
+  vertical-align: middle;
+  width: 100px;
+  margin-left: 8%;
+  display: inline-block;
+}
+
+/* caption box */
+.mySlides .captionbox{
+  width: 50%;
+  height: 300px;
+  background-color: #2b989e;
+  margin: 200px 25%;
+}
+
+.mySlides .captionbox img{
+  width: 64px;
+  height: 64px;
+  margin-top: 12%;
+  margin-left: 12%;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* abilities */
+.abilities{
+  display: block;
+  width: 100%;
+  height: 900px;
+  background-color: #969EA9;
+  color: white;
+}
+
+.abilities h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.abilities h2{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.allskill{
+  margin-top: 80px;
+}
+
+.skill{
+  margin: 5px auto;
+  width: 70%;
+  padding-top: 15px;
+}
+
+.skill label{
+  float: left;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.containerout,.containerout:hover
+{
+  margin-left: 150px;
+  color:#000;
+  background-color:#f1f1f1;
+  border-radius:8px;
+}
+
+.containerin, .containerin:hover{
+  padding:0.01em 16px;
+  color:#fff;
+  background-color:#2b989e;
+  border-radius:8px;
+  width: 0;
+  text-align: right;
+}
+
+
+
+
+
+/* background */
+.background{
+  display: block;
+  width: 100%;
+  height: 1000px;
+  background-color: #969EA9;
+  color: white;
+  background-image: url("uia5.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+  font-family: 'Poppins', sans-serif;
+}
+
+.background h1{
+  font-size: 3em;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.background h2{
+  text-align: center;
+}
+
+.background .box{
+  border-radius: 15px;
+  width: 400px;
+  clear: both;
+}
+
+.background .right{
+  text-align: left;
+  float: right;
+}
+
+.background .left{
+  text-align: right;
+  float: left;
+}
+
+.background h3{
+  color: #3f8185;
+  margin: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+}
+
+.background h5{
+  margin: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* contact us */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #2b989e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2b8a9e;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #bfc9d6;
+  padding: 10px;
+  padding-top: 100px;
+  height: 650px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container h1{
+  font-size: 3em;
+  text-align: center;
+  margin: 0;
+}
+
+.container h2{
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact img{
+  width:25%;
+  height: 400px;
+  object-fit: contain;
+  float: left;
+  margin-top: 6px;
+  margin-left: 12%;
+  padding: 20px;
+}
+
+.column form{
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+
+/* to top button */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2b989e;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #35b3ba;
+}

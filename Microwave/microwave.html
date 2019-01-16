@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .microwave{
+        background-color: black;
+        border: 1px solid black;
+        width: 250px;
+        height: 400px;
+        margin: 30px auto;
+      }
+      .timer{
+        color: white;
+        font-family: arial;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 25px;
+      }
+      .buttons{
+        color: black;
+        width: 85%;
+        margin: 10%;
+      }
+      .center{
+        margin-left: 35% !important
+      }
+      .buttons button{
+        height: 32px;
+        width: 54px;
+        font-size: 1.5em;
+        margin: 5px;
+      }
+      .addtime{
+        width: 100%;
+        margin-left: 5%;
+      }
+      .addtime button{
+        color: white;
+        font-family: arial;
+        text-align: center;
+        background-color: black;
+        font-size: 1.5em;
+        width: 45%;
+      }
+      .start button{
+        color: black;
+        font-family: arial;
+        text-align: center;
+        background-color: white;
+        font-size: 1.5em;
+        width: 90%;
+        margin: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="microwave">
+      <div class="timer" value=""></div>
+      <div class="buttons">
+        <button type="button" name="button" value="1">1</button>
+        <button type="button" name="button" value="2">2</button>
+        <button type="button" name="button" value="3">3</button>
+        <button type="button" name="button" value="4">4</button>
+        <button type="button" name="button" value="5">5</button>
+        <button type="button" name="button"value="6">6</button>
+        <button type="button" name="button"value="7">7</button>
+        <button type="button" name="button"value="8">8</button>
+        <button type="button" name="button"value="9">9</button>
+        <button class="center" type="button" value="0" name="button">0</button>
+      </div>
+      <div class="addtime">
+        <button type="button" name="button" onclick="timeadd(30)">0:30</button>
+        <button type="button" name="button" onclick="timeadd(60)">1:00</button>
+      </div>
+      <div class="start">
+        <button type="button" name="button">START</button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      var one = 0;
+      var two = 0;
+      var three = 0;
+      var four = 0;
+      var minute = 0;
+      var second = 0;
+      var time = 0;
+      $(".timer").val(one + "" + two + ":" + three + "" + four);
+      $(".timer").text($(".timer").val());
+
+    $(".buttons button").on('click', function(){
+      if(one==0){
+        one = two;
+        two = three;
+        three = four;
+        four = $(this).val();
+        $(".timer").val(one + "" + two + ":" + three + "" + four);
+        $(".timer").text($(".timer").val());
+        minute = one + two;
+        second = three + four;
+        time = minute*60 + second*1;
+      }
+    });
+
+    function timeadd(input){
+      time += input;
+      minute = Math.floor(time/60);
+      second = time%60;
+      display(minute, second);
+    }
+
+    $(".start").on("click", function(){
+      countdown(time);
+    });
+
+    function countdown(timecount) {
+        var timer = timecount, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            display(minutes, seconds);
+
+            console.log(timer);
+            if (--timer < 0) {
+                timer = timecount;
+            }
+        }, 1000); //will countdown by second. wait one second to see changes...
+    }
+
+    function display(minutes, seconds){
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      $(".timer").text(minutes + ":" + seconds);
+    }
+
+
+    </script>
+  </body>
+</html>
