@@ -1,0 +1,36 @@
+.card{
+  height: 400px;
+}
+
+.view{
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+
+.view img{
+  height: 150px;
+  width: 100%
+}
+.card-title{
+
+  margin-bottom: 30px;
+}
+.card-footer{
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.btn-mdb-color {
+  width: 50%;
+}
+
+
+.logo {
+  width: 20%;
+}
+
+.row{
+  margin: 50px;
+}
